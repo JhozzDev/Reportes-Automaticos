@@ -1,0 +1,44 @@
+{
+  "base": "USD",
+  "fecha_actualizacion": "Sat, 30 May 2026 00:02:31 +0000",
+  "metricas": {
+    "promedio_global": 9596.832,
+    "moneda_maxima": "IRR",
+    "moneda_minima": "CLF"
+  },
+  "monedas": [
+    {
+      "moneda": "COP",
+      "valor": 3650.174066
+    },
+    {
+      "moneda": "JPY",
+      "valor": 159.265864
+    },
+    {
+      "moneda": "DOP",
+      "valor": 59.102004
+    },
+    {
+      "moneda": "MXN",
+      "valor": 17.349287
+    },
+    {
+      "moneda": "BRL",
+      "valor": 5.047007
+    },
+    {
+      "moneda": "CAD",
+      "valor": 1.379434
+    },
+    {
+      "moneda": "EUR",
+      "valor": 0.857637
+    },
+    {
+      "moneda": "GBP",
+      "valor": 0.744046
+    }
+  ],
+  "generado_en": "2026-05-30 11:51:44"
+}

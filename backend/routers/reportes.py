@@ -1,6 +1,7 @@
 import os
 import json
 from fastapi import APIRouter, HTTPException
+from scheduler import generar_reporte
 
 router = APIRouter()
 DATA_DIR = "data"
@@ -13,10 +14,9 @@ def Reportes():
         if f.endswith(".json")
     ]
 
-    return{"status": "200",
-            "reportes": sorted(archivos, reverse=True)}
+    return{"reportes": sorted(archivos, reverse=True)}
 
-@router.get("/{fecha}")
+@router.get("/date/{fecha}")
 def Reportes_date(fecha:str):
     ruta = os.path.join(DATA_DIR, f"{fecha}.json")
     
@@ -30,7 +30,12 @@ def Reportes_date(fecha:str):
 
 @router.get("/generar")
 def Generar():
-    return {"status": "200"}
+    try:
+        generar_reporte()
+        return {"mensaje": "Reporte generado correctamente"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+ 
 
 
 @router.get("/test")
