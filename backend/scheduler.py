@@ -15,7 +15,7 @@ def generar_reporte():
 
     resultado["generado_en"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
-    nombre_archivo = datetime.now().strftime("%Y-%m-%d_%H:%M:%S") + ".json"
+    nombre_archivo = datetime.now().strftime("%Y-%m-%d-%H-%M-%S") + ".json"
     ruta = os.path.join(DATA_DIR, nombre_archivo)
 
     with open(ruta, "w", encoding="utf-8") as f:

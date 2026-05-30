@@ -27,7 +27,7 @@ export async function obtenerReportes(): Promise<string[]> {
 }
 
 export async function obtenerReporte(fecha: string): Promise<Reporte> {
-  const respuesta = await axios.get(`${BASE_URL}/reportes/date/${fecha}/`);
+  const respuesta = await axios.get(`${BASE_URL}/reportes/date/${fecha}`);
   return respuesta.data;
 }
 
